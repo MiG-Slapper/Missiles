@@ -5,71 +5,59 @@
   "shotFreq": 1000.25,
   "sound": "weapon.rocketgun_132",
   "helicopterGroup": 2,
-  "mesh": "atam_mistral_rocket",
+  "mesh": "us_aim_9l_sidewinder",
   "tags": [],
   "rocket": [
     {
       "bulletType": "aam"
     },
     {
-      "bulletName": "atam_mistral"
+      "bulletName": "us_aim9b_sidewinder"
     },
     {
-      "caliber": 0.09
+      "caliber": 0.127
     },
     {
-      "mass": 19.7
+      "mass": 76.9
     },
     {
       "explosiveType": "tnt"
     },
     {
-      "explosiveMass": 2.65
+      "explosiveMass": 11.0
     },
     {
-      "massEnd": 12.5
-    },
-    {
-      "massEnd1": 11.3
+      "massEnd": 58.0
     },
     {
       "maxDeltaAngle": 2.0
     },
     {
-      "dragCx": 0.014
+      "dragCx": 0.018
     },
     {
-      "length": 1.86
+      "length": 3.05
     },
     {
-      "distFromCmToStab": 0.025
+      "distFromCmToStab": 0.1
     },
     {
-      "CxK": 1.76
+      "CxK": 3.2
     },
     {
       "WdK": [0.1,0.1,0.1]
     },
     {
-      "finsAoaHor": 0.09
+      "finsAoaHor": 0.16
     },
     {
-      "finsAoaVer": 0.09
+      "finsAoaVer": 0.16
     },
     {
-      "force": 6600.0
+      "force": 18100.0
     },
     {
-      "timeFire": 2.0
-    },
-    {
-      "force1": 500.0
-    },
-    {
-      "timeFire1": 4.0
-    },
-    {
-      "thrustVectoringAngle": 0.002
+      "timeFire": 2.2
     },
     {
       "spawnExplosionFx": false
@@ -105,7 +93,7 @@
       "smokeEffect": "hydra_smoke_modern"
     },
     {
-      "maxDistance": 5000.0
+      "maxDistance": 18000.0
     },
     {
       "minDistance": 30.0
@@ -132,22 +120,10 @@
       "warmUpTime": 5.0
     },
     {
-      "workTime": 60.0
+      "workTime": 10.0
     },
     {
-      "uncageBeforeLaunch": false
-    },
-    {
-      "loftTime": [0.05,0.5]
-    },
-    {
-      "loftOmegaLimit": 0.1
-    },
-    {
-      "loftAccel": 60.0
-    },
-    {
-      "useThrustVectoringForLoft": true
+      "uncageBeforeLaunch": true
     },
     {
       "guidanceSfx": "alarm_con_scan"
@@ -156,7 +132,7 @@
       "hasProximityFuse": true
     },
     {
-      "breakLockMaxTime": 5.0
+      "breakLockMaxTime": 3.0
     },
     {
       "explodeTreshold": 0.01
@@ -210,19 +186,35 @@
       "speedViscosity": 0.2
     },
     {
-      "timeLife": 20.0
+      "timeLife": 40.0
     },
     {
       "machMax": 2.5
     },
     {
-      "loadFactorMax": 18.0
+      "loadFactorMax": 20.0
     },
     {
-      "rangeMax": 6.0
+      "rangeMax": 18.0
     },
     {
       "price": 3000.0
+    },
+    {
+      "collisions": {
+        "steel": {
+          "fx": "cannon_hit_armor_cumulative",
+          "fxScale": [4.0,5.0]
+        },
+        "buildings": {
+          "fx": "atgm_hit",
+          "fxScale": [2.2,2.5]
+        },
+        "wood": {
+          "fx": "atgm_hit",
+          "fxScale": [2.2,2.5]
+        }
+      }
     },
     {
       "DamageParts": {
@@ -337,54 +329,34 @@
       }
     },
     {
-      "collisions": {
-        "steel": {
-          "fx": "cannon_hit_armor_cumulative",
-          "fxScale": [4.0,5.0]
-        },
-        "buildings": {
-          "fx": "atgm_hit",
-          "fxScale": [2.2,2.5]
-        },
-        "wood": {
-          "fx": "atgm_hit",
-          "fxScale": [2.2,2.5]
-        }
-      }
-    },
-    {
       "irSeeker": {
         "rangeBand0": 5500.0,
-        "rangeBand1": 3000.0,
-        "rangeBand2": 5000.0,
-        "rangeBand3": 0.0,
+        "rangeBand2": 4000.0,
+        "rangeBand3": 4000.0,
         "rangeMax": 11000.0,
-        "fov": 3.0,
+        "fov": 2.5,
         "minAngleToSun": 10.0,
-        "gateWidth": 1.0,
-        "bandMaskToReject": 4,
-        "lockAngleMax": 38.0,
-        "angleMax": 38.0,
-        "rateMax": 35.0,
-        "prolongationTimeMax": 3.0
+        "lockAngleMax": 10.0,
+        "angleMax": 40.0,
+        "rateMax": 16.5,
+        "prolongationTimeMax": 1.0,
+        "targetDesignator": true
       }
     },
     {
       "propNavGuidance": {
+        "timeOut": 0.5,
         "propNavMult": 4.0,
-        "accelControlProp": 0.01,
-        "accelControlIntg": 0.002,
+        "accelControlProp": 1.5,
+        "accelControlIntg": 0.1,
         "accelControlIntgLim": 0.5,
-        "accelControlDiff": 0.0016
+        "accelControlDiff": 0.4
       }
     },
     {
       "proximityFuse": {
         "timeOut": 0.5,
-        "radius": 3.0,
-        "detectAirUnits": true,
-        "detectGroundUnits": false,
-        "detectGround": false
+        "radius": 5.0
       }
     },
     {
