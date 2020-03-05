@@ -5,29 +5,29 @@
   "shotFreq": 1000.25,
   "sound": "weapon.rocketgun_132",
   "helicopterGroup": 2,
-  "mesh": "us_aim_9e_sidewinder",
+  "mesh": "us_aim_9l_sidewinder",
   "tags": [],
   "rocket": [
     {
       "bulletType": "aam"
     },
     {
-      "bulletName": "us_aim9e_sidewinder"
+      "bulletName": "us_aim9b_sidewinder"
     },
     {
       "caliber": 0.127
     },
     {
-      "mass": 76.5
+      "mass": 76.9
     },
     {
       "explosiveType": "tnt"
     },
     {
-      "explosiveMass": 4.5
+      "explosiveMass": 11.0
     },
     {
-      "massEnd": 57.5
+      "massEnd": 58.0
     },
     {
       "maxDeltaAngle": 2.0
@@ -36,28 +36,28 @@
       "dragCx": 0.018
     },
     {
-      "length": 3.0
+      "length": 3.05
     },
     {
       "distFromCmToStab": 0.1
     },
     {
-      "CxK": 1.8
+      "CxK": 3.2
     },
     {
       "WdK": [0.1,0.1,0.1]
     },
     {
-      "finsAoaHor": 0.08
+      "finsAoaHor": 0.16
     },
     {
-      "finsAoaVer": 0.08
+      "finsAoaVer": 0.16
     },
     {
-      "force": 17619.0
+      "force": 18100.0
     },
     {
-      "timeFire": 2.1
+      "timeFire": 2.2
     },
     {
       "spawnExplosionFx": false
@@ -126,7 +126,7 @@
       "uncageBeforeLaunch": true
     },
     {
-      "guidanceSfx": "alarm_spin_scan"
+      "guidanceSfx": "alarm_con_scan"
     },
     {
       "hasProximityFuse": true
@@ -180,19 +180,19 @@
       "startSpeed": 0.0
     },
     {
-      "endSpeed": 800.0
+      "endSpeed": 1000.0
     },
     {
       "speedViscosity": 0.2
     },
     {
-      "timeLife": 20.0
+      "timeLife": 40.0
     },
     {
       "machMax": 2.5
     },
     {
-      "loadFactorMax": 10.0
+      "loadFactorMax": 20.0
     },
     {
       "rangeMax": 18.0
@@ -338,18 +338,19 @@
         "minAngleToSun": 10.0,
         "lockAngleMax": 10.0,
         "angleMax": 40.0,
-        "rateMax": 12.0,
+        "rateMax": 16.5,
         "prolongationTimeMax": 1.0,
         "targetDesignator": true
       }
     },
     {
       "propNavGuidance": {
+        "timeOut": 0.5,
         "propNavMult": 4.0,
-        "accelControlProp": 2.0,
-        "accelControlIntg": 0.05,
+        "accelControlProp": 1.5,
+        "accelControlIntg": 0.1,
         "accelControlIntgLim": 0.5,
-        "accelControlDiff": 0.2
+        "accelControlDiff": 0.4
       }
     },
     {
